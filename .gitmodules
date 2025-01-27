@@ -1,0 +1,3 @@
+[submodule "private_dot_config/awesome/themes/default/awesome-wm-widgets"]
+	path = private_dot_config/awesome/themes/default/awesome-wm-widgets
+	url = git@github.com:streetturtle/awesome-wm-widgets.git
