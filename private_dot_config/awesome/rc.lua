@@ -63,7 +63,7 @@ awful.spawn.with_shell(
     'bash -c \'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
     'xrdb -merge <<< "awesome.started:true";' ..
     -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
-    'dex --environment Awesome --autostart --search-paths "/etc/xdg/autostart:$HOME/.config/autostart"' -- https://github.com/jceb/dex
+    'dex --environment Awesome --autostart --search-paths "$HOME/.config/autostart"\'' -- https://github.com/jceb/dex
 )
 
 --]]
