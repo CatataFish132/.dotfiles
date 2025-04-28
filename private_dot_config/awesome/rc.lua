@@ -562,6 +562,9 @@ globalkeys = gears.table.join(
             'run'))
         end,
         {description = "show rofi", group = "launcher"}),
+    awful.key({ modkey }, "t", function ()
+	    os.execute("rofi-pass") end,
+	{description = "show rofi pass", group = "launcher"}),
 --[[
     awful.key({ modkey }, "x",
               function ()
