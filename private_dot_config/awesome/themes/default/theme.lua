@@ -101,7 +101,7 @@ theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/
 local markup = lain.util.markup
 local separators = lain.util.separators
 
-local pacman_widget = require('awesome-wm-widgets.pacman-widget.pacman')
+-- local pacman_widget = require('awesome-wm-widgets.pacman-widget.pacman')
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
 
@@ -290,7 +290,7 @@ function theme.at_screen_connect(s)
             --arrow(theme.bg_normal, "#343434"),
             --wibox.container.background(wibox.container.margin(wibox.widget { mailicon, theme.mail and theme.mail.widget, layout = wibox.layout.align.horizontal }, dpi(4), dpi(7)), "#343434"),
             --arrow("#343434", theme.bg_normal),
-            wibox.container.background(wibox.container.margin(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, dpi(3), dpi(6)), theme.bg_focus),
+            --wibox.container.background(wibox.container.margin(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, dpi(3), dpi(6)), theme.bg_focus),
             --arrow(theme.bg_normal, "#343434"),
             --wibox.container.background(wibox.container.margin(task, dpi(3), dpi(7)), "#343434"),
 	    brightness_widget{program = "xbacklight", step=2},
@@ -307,9 +307,10 @@ function theme.at_screen_connect(s)
             arrow("#CB755B", "#4B696D"),
             --wibox.container.background(wibox.container.margin(wibox.widget { brighticon, brightwidget.base_widget, layout = wibox.layout.align.horizontal }, dpi(3), dpi(3)), "#8DAA9A"),
             --wibox.container.background(wibox.container.margin(wibox.widget { neticon, pacman_widget {polkit_agent_path = '/usr/lib/polkit-kde-authentication-agent-1'}, layout = wibox.layout.align.horizontal }, dpi(3), dpi(3)), "#C0C0A2"),
-	    wibox.container.background(pacman_widget(),"#4B696D"),
+	    --wibox.container.background(pacman_widget(),"#4B696D"),
+            wibox.container.background(wibox.container.margin(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, dpi(3), dpi(6)), "#4B696D"),
             arrow("#4B696D", "#C0C0A2"),
-            wibox.container.background(wibox.container.margin(wibox.widget { nil, neticon, net.widget, layout = wibox.layout.align.horizontal }, dpi(3), dpi(3)), "#C0C0A2"),
+            wibox.container.background(wibox.container.margin(wibox.widget { neticon, net.widget, layout = wibox.layout.align.horizontal }, dpi(3), dpi(3)), "#C0C0A2"),
             arrow("#C0C0A2", "#777E76"),
             wibox.container.background(wibox.container.margin(textclock, dpi(4), dpi(8)), "#777E76"),
             arrow("#777E76", "alpha"),
