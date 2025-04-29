@@ -5,6 +5,7 @@ vim.opt.shiftwidth = 2        -- Indent size
 vim.opt.expandtab = true      -- Use spaces instead of tabs
 vim.opt.mouse = "a"           -- Enable mouse
 vim.opt.termguicolors = true  -- True color support
+vim.o.pumheight = 10
 -- vim.cmd('colorscheme tokyonight')
 -- -- core/options.lua
 vim.cmd.colorscheme("tokyonight-storm") -- or "tokyonight-storm", etc.

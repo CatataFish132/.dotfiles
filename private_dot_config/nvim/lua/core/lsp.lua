@@ -3,20 +3,6 @@ require("mason-lspconfig").setup({
   ensure_installed = { "lua_ls", "pyright" } -- Example servers
 })
 
---[[-- Configure LSP for Python
-local lspconfig = require("lspconfig")
-lspconfig.pyright.setup({
-  on_attach = function(client, bufnr)
-    -- Enable function signature help
-    require("lsp_signature").on_attach({
-      bind = true,
-      handler_opts = { border = "rounded" },
-    }, bufnr)
-  end,
-})
---]]
-
-
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
 vim.opt.signcolumn = 'yes'
@@ -37,7 +23,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)
     local opts = {buffer = event.buf}
 
-    --vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+    vim.keymap.set('n', '<leader>lk', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
     vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
     vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
     vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
